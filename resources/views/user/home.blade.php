@@ -13,8 +13,8 @@
     <table class="table">
         <tr>
             <td>Home</td>
-            <td>Sach</td>
-            <td>Gioi thieu</td>
+            <td>Sách</td>
+            <td>Giới thiệu</td>
             <td>Tìm kiếm</td>
             <td>
                 @if (session()->has('dangnhap'))
@@ -27,14 +27,21 @@
         </tr>
     </table>
     <table class="table">
+      <tr>
+        <td>Mã sách</td>
+        <td>Tên sách</td>
+        <td>Tên NXB</td>
+        <td>Thể loại</td>
+        <td>Giỏ hàng</td>
+      </tr>
         @foreach ($data as $item)
        <tr>
            <td>{{ $item->masach }}</td>
            <td>{{ $item->tensach }}</td>
            <td>{{ $item->nhaxb->tennxb }}</td>
            <td>{{ $item->loai->tenloai }}</td>
-           <td><img src="{{ url('public') }}/asset/image/ {{ $item->hinh }}" alt=""></td>
-           <td>......</td>
+           {{-- <td><img src="{{ url('public') }}/asset/image/ {{ $item->hinh }}" alt=""></td> --}}
+           <td><a>Thêm vào giỏ hàng</a></td>
        </tr>
        @endforeach
     </table>

@@ -103,4 +103,7 @@ class SachController extends Controller
     {
         //
     }
+    public function sanpham(){
+        return view('user.sanpham',['data'=>sach::all()]);
+    }
 }

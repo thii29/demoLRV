@@ -71,3 +71,9 @@ Route::get('/logout',function(){
     session()->forget('dangnhap');
     return redirect('/');
 });
+
+Route::get('/sanpham','SachController@sanpham')->name('sach.sanpham');
+Route::get('giohang','GioHangController@index')->name('showgiohang');
+Route::post('themgiohang','GioHangController@add')->name('themgh');
+Route::delete('delgh','GioHangController@remove')->name('delgh');
+Route::put('giohang','GioHangController@update')->name('update');
