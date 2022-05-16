@@ -11,7 +11,7 @@
   </head>
   <body>
       <h2>Giỏ hàng - ({{ Cart::getcontent()->count() }})</h2>
-      hr
+      <hr>
       <table border="1">
          @foreach (Cart::getcontent() as $item)
          <tr>
